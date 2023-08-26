@@ -1,0 +1,230 @@
+@keyframes a {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+
+.copyright h3 {
+    transition: all 0.3s;
+    animation-name: hoverAnimate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hoverAnimate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes shadowAnimate {
+    0% {
+        box-shadow: 12px 12px 20px #2e2f31;
+    }
+
+    50% {
+        box-shadow: 20px 20px 30px #7b7c7d;
+    }
+
+    100% {
+        box-shadow: 12px 12px 20px #2e2f31;
+    }
+}
+
+body {
+    max-width: 1280px;
+    animation-name: a;
+    animation-duration: 2s;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+
+
+
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+@keyframes right {
+    from {
+        left: 90%;
+    }
+
+    to {
+        left: 5%;
+    }
+}
+
+@keyframes rightfordate {
+    from {
+        left: 90%;
+    }
+
+    to {
+        left: 5%;
+    }
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 10%;
+    }
+}
+
+@keyframes top {
+    from {
+        top: 150%;
+    }
+
+    to {
+        top: 70%;
+    }
+}
+
+@media (max-width:1250px) {}
+
+
+.content-old header {
+    position: fixed;
+    top: 0.5rem;
+    left: 40%;
+}
+
+.hometextdescription h1 {
+    font-size: 1%;
+    animation-name: a;
+    animation-duration: 3s;
+    white-space: nowrap;
+    font-size: 5rem;
+}
+
+.hometextdescription h2 {
+    position: absolute;
+    animation-name: top;
+    animation-duration: 2s;
+    top: 70%;
+}
+
+.hometextdescription {
+    animation-duration: 3s;
+    text-decoration: blink;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    color: #fff;
+}
+
+.hometextdescription a {
+    animation-name: right;
+    animation-name: a;
+    background: -webkit-linear-gradient(bottom, #a294f0 0%, #6f01ff 50%, #00a8fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav_list {
+    top: 1%;
+    font-size: 150%;
+    line-height: 30%;
+    display: flex;
+    left: 1rem;
+    gap: 3rem;
+    color: #fff;
+}
+
+
+.imgs {
+    position: absolute;
+    top: -0.01%;
+    left: 110%;
+}
+
+.content-old {
+    position: fixed;
+    width: 100%;
+    height: 90vh;
+    color: #fff;
+
+}
+
+.logo {
+    animation-name: a;
+    animation-duration: 2s;
+    height: 50%;
+    width: 50%;
+}
+
+.titlebox {
+
+    position: fixed;
+    animation-name: a;
+    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 2s;
+    /*動畫持續時間，單位為秒*/
+    /*動畫延遲開始時間*/
+    margin-right: 1%;
+    display: inline-block;
+    background-color: #0a0c10;
+    height: 10%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 20%;
+    text-align: start;
+
+    right: 0.1px;
+}
+
+a {
+    color: #fff;
+}
+
+.copyright {
+    animation-name: a;
+    animation-duration: 3s;
+    color: #fff;
+    line-height: 10%;
+    position: absolute;
+    top: 90%;
+    right: 35%;
+}
+
+.nowdate {
+    animation-name: rightfordate;
+    animation-duration: 2s;
+    color: #fff;
+    position: absolute;
+    top: 95%;
+    left: 5%;
+    font-size: 20px;
+}

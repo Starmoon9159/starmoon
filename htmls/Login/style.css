@@ -1,0 +1,250 @@
+body {
+    background-image: url('./background.gif');
+    background-position: center;
+    background-size: cover;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+    ;
+}
+
+.form-box .title {
+    color: white;
+    font-size: 48px;
+    text-align: top;
+}
+
+
+.form-box {
+    margin-top: 5%;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    display: flex;  
+    justify-content: center;
+    align-items:top;
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+@media (max-width:1250px) {}
+@media(max-width:575.98px){
+    .logo{
+        display: none;
+    }
+    .home-img img{
+        display: none;
+    }
+    .copyright{
+        display: none;
+    }
+    .home-content h3 {
+       display: none;
+    }
+    .home-content h3 span{
+        display: none;
+    } 
+}
+@media (max-width:700px){
+    .home-content h3 {
+        display: none;
+     }
+    .logo{
+        display: none;
+    }
+.copyright{
+        display: none;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards, floatImage 4s ease-out infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    background: url('background6.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes rainbow {
+
+    100%,
+    0% {
+        border: 2px rgb(255, 0, 0)solid;
+    }
+
+    8% {
+        border: 2px rgb(255, 127, 0) solid;
+    }
+
+    16% {
+        border: 2px rgb(255, 255, 0) solid;
+    }
+
+    25% {
+        border: 2px rgb(127, 255, 0) solid;
+    }
+
+    33% {
+        border: 2px rgb(0, 255, 0) solid;
+    }
+
+    41% {
+        border: 2px rgb(0, 255, 127) solid;
+    }
+
+    50% {
+        border: 2px rgb(0, 255, 255) solid;
+    }
+
+    58% {
+        border: 2px rgb(0, 127, 255) solid;
+    }
+
+    66% {
+        border: 2px rgb(0, 0, 255) solid;
+    }
+
+    75% {
+        border: 2px rgb(127, 0, 255) solid;
+    }
+
+    83% {
+        border: 2px rgb(255, 0, 255) solid;
+    }
+
+    91% {
+        border: 2px #ff007f solid;
+    }
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slidebottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
